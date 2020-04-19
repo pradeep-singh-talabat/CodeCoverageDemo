@@ -49,7 +49,6 @@ jobs:
           command: dotnet test ./src/SuperComplex/
       - sonarcloud/scan
 workflows:
-  version: 2
   build_test_dev:
     jobs:
       - dev:
