@@ -1,4 +1,4 @@
-version: 2
+version: 2.1
 jobs:
   release:
     docker:
@@ -46,7 +46,6 @@ jobs:
           name: Test Solution
           command: dotnet test ./src/SuperComplex/
 workflows:
-  version: 2
   build_test_dev:
     jobs:
       - dev
