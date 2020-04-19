@@ -1,5 +1,7 @@
 # Code Coverage Demo
 
+[![codecov](https://codecov.io/gh/pradeep-singh-talabat/CodeCoverageDemo/branch/master/graph/badge.svg)](https://codecov.io/gh/pradeep-singh-talabat/CodeCoverageDemo)
+
 A full fledged CI/CD and code coverage demo using CircleCI and CodeCov in combination with GitHub Actions.
 
 ## Repository Structure
