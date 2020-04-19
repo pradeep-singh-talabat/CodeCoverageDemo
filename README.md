@@ -61,4 +61,4 @@ The following actions are pre-configured in your repository.
 2. Auto deploy to QA (by triggerring a circle CI build) whenever some adds ```approved``` tag on a PR. You need to create appropriate circle CI jobs in the circle CI [```.circleci```](../.circleci/README.md) folder.
 3. Auto deploy to production when you create a tag. For more information about Tag please refer to [Github Documentation](https://developer.github.com/v3/git/tags/).
 
-ToDo: Fix the timeout on CodeCov
+**Experimental: SonarQube**
