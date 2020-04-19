@@ -5,7 +5,7 @@ on:
     - labeled
 jobs:
   read_for_review_pr_job:
-    if: github.event.label.name == 'approved'
+    if: github.event.label.name == 'ready-for-review'
     runs-on: ubuntu-latest
     name: Run Code Coverage
     steps:
