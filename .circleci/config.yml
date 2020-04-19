@@ -38,6 +38,7 @@ jobs:
     working_directory: $CIRCLE_WORKING_DIRECTORY
     steps:
       - checkout
+      - sonarcloud/scan
       - run:
           name: Restore Packages
           command: dotnet restore ./src/SuperComplex/
@@ -47,9 +48,8 @@ jobs:
       - run:
           name: Test Solution
           command: dotnet test ./src/SuperComplex/
-      - sonarcloud/scan
 workflows:
   build_test_dev:
     jobs:
       - dev:
-         context: sonarcloud
+          context: sonarcloud
