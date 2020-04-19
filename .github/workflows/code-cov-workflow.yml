@@ -1,0 +1,24 @@
+name: approved workflow
+on:
+  push:
+   branches:
+    - master
+  pull_request:
+   types:
+    - labeled
+jobs:
+  read_for_review_pr_job:
+    if: github.event.label.name == 'ready-for-review'
+    runs-on: ubuntu-latest
+    name: Run Code Coverage
+    steps:
+    - uses: actions/checkout@master
+    - uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: '3.1.100' # SDK Version to use.
+    - run: dotnet build ./src/SuperComplex/
+    - run: dotnet test ./src/SuperComplex/ /p:CollectCoverage=true /p:CoverletOutputFormat=opencover /p:CoverletOutput='./coverage.xml'
+    - uses: codecov/codecov-action@v1
+      with:
+        token: ${{ secrets.CODECOV_TOKEN }}
+        file: ./test/SuperComplex.TasksLibrary.Tests/coverage.xml
