@@ -1,6 +1,6 @@
-# [YOUR_REPOSITORY_NAME]
+# Code Coverage Demo
 
-[YOUR_PROJECT_DESCRIPTION]
+A full fledged CI/CD and code coverage demo using CircleCI and CodeCov in combination with GitHub Actions.
 
 ## Repository Structure
 
