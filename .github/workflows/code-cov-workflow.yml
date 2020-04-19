@@ -4,11 +4,10 @@ on:
    branches:
     - master
   pull_request:
-   types:
-    - labeled
+   branches:
+    - master
 jobs:
   read_for_review_pr_job:
-    if: github.event.label.name == 'ready-for-review'
     runs-on: ubuntu-latest
     name: Run Code Coverage
     steps:
